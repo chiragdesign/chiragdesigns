@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chirag Sachdeva — Portfolio</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Pinyon+Script&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="portfolio.css">
+</head>
+<body>
+
+  <div class="noise"></div>
+  <div class="grid-overlay"></div>
+
+  <!-- SVG filter that fuses the jelly blobs into one gooey shape -->
+  <svg class="goo-defs" width="0" height="0">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="9" result="blur" />
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 22 -10"
+          result="goo" />
+        <feComposite in="SourceGraphic" in2="goo" operator="atop" />
+      </filter>
+    </defs>
+  </svg>
+
+  <div class="jelly-cursor" id="jellyCursor">
+    <div class="blob" data-size="34"></div>
+    <div class="blob" data-size="26"></div>
+    <div class="blob" data-size="20"></div>
+    <div class="blob" data-size="15"></div>
+    <div class="blob" data-size="11"></div>
+    <div class="blob" data-size="8"></div>
+  </div>
+
+  <header class="site-header">
+    <div class="brand">
+      <span class="brand-name">Chirag Sachdeva</span>
+      <span class="brand-role">Graphic Designer</span>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <a href="#home" class="nav-link active">Home</a>
+      <a href="#about" class="nav-link">About</a>
+      <a href="#contact" class="nav-link">Contact Us</a>
+    </nav>
+  </header>
+
+  <main class="hero" id="home">
+    <h1 class="hero-title tilt-card reveal-3d delay-0" data-text="PORTFOLIO">PORTFOLIO</h1>
+    <p class="hero-role reveal-3d delay-1">Graphic Designer 2026</p>
+    <p class="hero-sub reveal-3d delay-2">Designing that words can't say</p>
+  </main>
+
+  <section class="about" id="about">
+    <span class="about-vertical">Design is my language</span>
+
+    <div class="about-grid">
+      <div class="about-col about-col-left reveal-3d">
+        <h2 class="about-title">
+          <span class="about-title-line about-title-outline">About</span>
+          <span class="about-title-line about-title-chrome" data-text="Me">Me</span>
+        </h2>
+
+        <div class="about-card tilt-card">
+          <span class="about-card-label">Who am I?</span>
+          <p>
+            I'm Chirag Sachdeva, a passionate graphic designer who believes in
+            turning ideas into powerful visual experiences. For me, design is not
+            just about visuals — it's about solving problems, telling stories &amp;
+            creating impact.
+          </p>
+        </div>
+
+        <div class="about-signature">
+          <span class="sig-script">Chirag</span>
+          <span class="sig-name">Chirag Sachdeva</span>
+          <span class="sig-role">Graphic Designer</span>
+        </div>
+      </div>
+
+      <div class="about-col about-col-photo reveal-3d delay-1">
+        <div class="photo-frame tilt-card">
+          <div class="photo-label">
+            <span>Focused</span>
+            <span>Creative</span>
+            <span>Detailed</span>
+            <i class="photo-diag" aria-hidden="true"></i>
+          </div>
+
+          <img id="aboutPhoto" class="photo-img" src="motu.jpg" alt="Chirag Sachdeva"
+               onerror="this.style.display='none'; document.getElementById('photoFallback').style.display='block';">
+
+          <svg id="photoFallback" class="photo-silhouette" viewBox="0 0 260 420" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+            <defs>
+              <linearGradient id="silhouetteLight" x1="0%" y1="0%" x2="100%" y2="60%">
+                <stop offset="0%" stop-color="#2c2a38" />
+                <stop offset="45%" stop-color="#0e0c14" />
+                <stop offset="100%" stop-color="#020103" />
+              </linearGradient>
+              <linearGradient id="silhouetteRim" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" stop-color="rgba(155,123,216,0.55)" />
+                <stop offset="100%" stop-color="rgba(155,123,216,0)" />
+              </linearGradient>
+            </defs>
+            <rect width="260" height="420" fill="url(#silhouetteLight)" />
+            <path d="M130 40c26 0 44 22 46 50 1 14-2 26-8 36 22 10 40 30 46 58 8 34 10 90 10 154H36c0-64 2-120 10-154 6-28 24-48 46-58-6-10-9-22-8-36 2-28 20-50 46-50z"
+              fill="#050308" opacity="0.92" />
+            <path d="M130 40c26 0 44 22 46 50 1 14-2 26-8 36 22 10 40 30 46 58 8 34 10 90 10 154h-20c0-60-2-112-9-144-6-27-21-46-43-56 7-11 10-24 8-38-2-27-19-46-30-56z"
+              fill="url(#silhouetteRim)" opacity="0.7" />
+          </svg>
+          <div class="photo-barcode" aria-hidden="true"></div>
+          <span class="photo-spark" aria-hidden="true">✦</span>
+        </div>
+      </div>
+
+      <div class="about-col about-col-right reveal-3d delay-2">
+        <span class="quote-mark" aria-hidden="true">&ldquo;</span>
+        <h3 class="about-quote">Designing that <em>words</em> can&rsquo;t say.</h3>
+        <p class="about-desc">
+          I specialize in creating clean, modern and meaningful design solutions
+          that help brands communicate, connect and stand out. From branding and
+          typography to digital design and visual storytelling, I love bringing
+          concepts to life with clarity and purpose.
+        </p>
+
+        <span class="about-divider"></span>
+
+        <ul class="about-info">
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8Zm-8 9a8 8 0 0 1 16 0" /></svg>
+            <span class="info-label">Name</span>
+            <span class="info-value">Chirag Sachdeva</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2" /><path d="M3 10h18M8 3v4M16 3v4" /></svg>
+            <span class="info-label">Birthdate</span>
+            <span class="info-value">28 Feb, 2009</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><path d="M12 22s7-7.4 7-12.5A7 7 0 0 0 5 9.5C5 14.6 12 22 12 22Z" /><circle cx="12" cy="9.5" r="2.3" /></svg>
+            <span class="info-label">Location</span>
+            <span class="info-value">Chandigarh, India</span>
+          </li>
+          <li>
+            <svg viewBox="0 0 24 24"><rect x="2.5" y="5" width="19" height="14" rx="2" /><path d="m3 6 9 7 9-7" /></svg>
+            <span class="info-label">Email</span>
+            <span class="info-value">chiragsachdeva7758@gmail.com</span>
+          </li>
+        </ul>
+
+        <span class="skills-label">Skills &amp; Expertise</span>
+        <div class="skills-row">
+          <div class="skill-badge"><strong>Ai</strong><small>Illustrator</small></div>
+          <div class="skill-badge"><strong>Ps</strong><small>Photoshop</small></div>
+          <div class="skill-badge"><strong>Cv</strong><small>Canva</small></div>
+          <div class="skill-badge"><strong>Dv</strong><small>Davinchi resolve</small></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-footer">
+      <span class="footer-line"></span>
+      <span>Let&rsquo;s create</span>
+      <span class="footer-spark">✦</span>
+      <span>something epic</span>
+      <span class="footer-line"></span>
+    </div>
+
+    <span class="about-page-index"><b>02</b> / 10</span>
+  </section>
+
+  <section class="toc" id="toc">
+    <div class="toc-grid">
+      <div class="toc-col toc-col-left reveal-3d">
+        <h2 class="toc-title">
+          <span class="toc-title-line toc-title-outline">Table of</span>
+          <span class="toc-title-line toc-title-chrome">Contents</span>
+        </h2>
+
+        <p class="toc-lead">A journey through<br>ideas, design<br>and impact.</p>
+
+        <span class="toc-divider"></span>
+
+        <div class="toc-ring-wrap tilt-card">
+          <svg class="toc-ring" viewBox="0 0 300 300">
+            <defs>
+              <linearGradient id="ringGrad" x1="10%" y1="0%" x2="90%" y2="100%">
+                <stop offset="0%" stop-color="#f2eefc" />
+                <stop offset="28%" stop-color="#8f7fd6" />
+                <stop offset="55%" stop-color="#211d33" />
+                <stop offset="78%" stop-color="#6f8fe0" />
+                <stop offset="100%" stop-color="#f2eefc" />
+              </linearGradient>
+              <path id="tocArcTop" d="M 55,150 A 95,95 0 0 1 245,150" fill="none" />
+              <path id="tocArcBottom" d="M 55,150 A 95,95 0 0 0 245,150" fill="none" />
+            </defs>
+
+            <circle cx="150" cy="150" r="95" fill="none" stroke="url(#ringGrad)" stroke-width="22" />
+            <circle cx="150" cy="150" r="95" fill="none" stroke="#000" stroke-width="22" opacity="0.25" stroke-dasharray="2 14" />
+
+            <text class="toc-ring-text">
+              <textPath href="#tocArcTop" startOffset="50%" text-anchor="middle">Designing that</textPath>
+            </text>
+            <text class="toc-ring-text">
+              <textPath href="#tocArcBottom" startOffset="50%" text-anchor="middle">Words can&#8217;t say</textPath>
+            </text>
+          </svg>
+          <span class="toc-spark toc-spark-a" aria-hidden="true">✦</span>
+          <span class="toc-spark toc-spark-b" aria-hidden="true">✦</span>
+        </div>
+
+        <div class="toc-signature">
+          <span class="sig-script">Chirag</span>
+          <span class="sig-name">Chirag Sachdeva</span>
+          <span class="sig-role">Graphic Designer</span>
+        </div>
+      </div>
+
+      <div class="toc-col toc-col-right reveal-3d delay-1">
+        <ol class="toc-list">
+          <li class="toc-item">
+            <span class="toc-num">01</span>
+            <span class="toc-item-text">
+              <span class="toc-item-title">Cover Page</span>
+              <span class="toc-item-desc">First impression matters.</span>
+            </span>
+            <svg class="toc-icon" viewBox="0 0 24 24"><path d="M12 2l2.2 6.8H21l-5.6 4.1 2.1 6.9L12 15.8 6.5 19.8l2.1-6.9L3 8.8h6.8Z" /></svg>
+          </li>
+          <li class="toc-item">
+            <span class="toc-num">02</span>
+            <span class="toc-item-text">
+              <span class="toc-item-title">About Me</span>
+              <span class="toc-item-desc">My story, my passion, my purpose.</span>
+            </span>
+            <svg class="toc-icon" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4" /><path d="M4 21a8 8 0 0 1 16 0" /></svg>
+          </li>
+          <li class="toc-item active">
+            <span class="toc-num">03</span>
+            <span class="toc-item-text">
+              <span class="toc-item-title">Table of Contents</span>
+              <span class="toc-item-desc">Navigate through the journey.</span>
+            </span>
+            <svg class="toc-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9" /><circle cx="12" cy="12" r="3.4" /></svg>
+          </li>
+          <li class="toc-item">
+            <span class="toc-num">04</span>
+            <span class="toc-item-text">
+              <span class="toc-item-title">Logofolio</span>
+              <span class="toc-item-desc">A showcase of my best Logos.</span>
+            </span>
+            <svg class="toc-icon" viewBox="0 0 24 24"><rect x="3" y="8" width="18" height="12" rx="2" /><path d="M8 8V6a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" /></svg>
+          </li>
+          <li class="toc-item">
+            <span class="toc-num">05</span>
+            <span class="toc-item-text">
+              <span class="toc-item-title">Branding illustration</span>
+              <span class="toc-item-desc">Concept to creation.</span>
+            </span>
+            <svg class="toc-icon" viewBox="0 0 24 24"><circle cx="5" cy="18" r="1.8" /><circle cx="19" cy="6" r="1.8" /><path d="M5 18C10 18 8 6 19 6" /></svg>
+          </li>
+          <li class="toc-item">
+            <span class="toc-num">06</span>
+            <span class="toc-item-text">
+              <span class="toc-item-title">Posters</span>
+              <span class="toc-item-desc">Exploring ideas. Pushing limits.</span>
+            </span>
+            <svg class="toc-icon" viewBox="0 0 24 24"><path d="M9 2h6M10 2v6.5L4.8 18a2 2 0 0 0 1.7 3h11a2 2 0 0 0 1.7-3L14 8.5V2" /></svg>
+          </li>
+          <li class="toc-item">
+            <span class="toc-num">07</span>
+            <span class="toc-item-text">
+              <span class="toc-item-title">Social Posts</span>
+              <span class="toc-item-desc">Social media post design</span>
+            </span>
+            <svg class="toc-icon" viewBox="0 0 24 24"><path d="M12 21s-7.5-4.6-10-9.3C.4 8 2 4.5 5.6 4a5 5 0 0 1 6.4 2.5A5 5 0 0 1 18.4 4c3.6.5 5.2 4 3.6 7.7C19.5 16.4 12 21 12 21Z" /></svg>
+          </li>
+
+          <li class="toc-item">
+            <span class="toc-num">08</span>
+            <span class="toc-item-text">
+              <span class="toc-item-title">Retouching and restoration</span>
+             <span class="toc-item-desc">Laved to be repaired and recreate.</span>
+            </span>
+            <svg class="toc-icon" viewBox="0 0 24 24"><path d="M22 2 11 13" /><path d="m22 2-7 20-4-9-9-4 20-7Z" /></svg>
+          </li>
+
+          <li class="toc-item">
+            <span class="toc-num">09</span>
+            <span class="toc-item-text">
+              <span class="toc-item-title">Thumbnail</span>
+             <span class="toc-item-desc">Point of attraction.</span>
+            </span>
+            <svg class="toc-icon" viewBox="0 0 24 24"><path d="M22 2 11 13" /><path d="m22 2-7 20-4-9-9-4 20-7Z" /></svg>
+          </li>
+
+
+          <li class="toc-item">
+            <span class="toc-num">10</span>
+            <span class="toc-item-text">
+              <span class="toc-item-title">Contact Us !!</span>
+             <span class="toc-item-desc">Let’s connect and create.</span>
+            </span>
+            <svg class="toc-icon" viewBox="0 0 24 24"><path d="M22 2 11 13" /><path d="m22 2-7 20-4-9-9-4 20-7Z" /></svg>
+          </li>
+        </ol>
+
+        <p class="toc-quote">Designing that <em>words</em> can&rsquo;t say.</p>
+      </div>
+    </div>
+
+    <span class="toc-page-index"><b>03</b> / 10</span>
+  </section>
+
+  <section class="logofolio" id="logofolio">
+    <div class="logofolio-center reveal-3d tilt-card">
+      <h2 class="logofolio-title">LOGO</h2>
+      <p class="logofolio-sub">
+        <span class="lf-spark" aria-hidden="true">✦</span>
+        <span class="lf-word">FOLIO</span>
+        <span class="lf-spark" aria-hidden="true">✦</span>
+      </p>
+    </div>
+
+    <div class="logofolio-tags">
+      <span>Visual Identity</span>
+      <i></i>
+      <span>Brand Design</span>
+      <i></i>
+      <span>Logo Design</span>
+    </div>
+
+    <span class="logofolio-corner-spark" aria-hidden="true">✦</span>
+    <span class="logofolio-page-index"><b>04</b> / 10</span>
+  </section>
+
+  <section class="logogrid" id="logogrid">
+    <div class="logogrid-head">
+      <h2 class="logogrid-title">
+        <span class="lg-logo reveal-3d">Logo</span>
+        <span class="lg-folio reveal-3d delay-1">Folio</span>
+      </h2>
+
+      <p class="logogrid-desc reveal-3d delay-2">
+        A collection of logo designs crafted for brands with purpose and identity.
+      </p>
+    </div>
+
+    <div class="logogrid-grid">
+      <div class="logo-card tilt-card reveal-3d">
+        <span class="corner-spark corner-spark-tr" aria-hidden="true">✦</span>
+        <span class="corner-spark corner-spark-bl" aria-hidden="true">✦</span>
+        <div class="logo-card-mark">
+          <span class="logo-placeholder">A</span>
+          <img class="logo-img" src="Kurti Villa.jpeg" alt="Kurti Villa"
+               onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+               onerror="this.style.display='none';">
+        </div>
+        <span class="logo-card-name">Kurti Villa</span>
+        <span class="logo-card-num">01<i></i></span>
+      </div>
+
+      <div class="logo-card tilt-card reveal-3d delay-1">
+        <span class="corner-spark corner-spark-tr" aria-hidden="true">✦</span>
+        <span class="corner-spark corner-spark-bl" aria-hidden="true">✦</span>
+        <div class="logo-card-mark">
+          <span class="logo-placeholder">V</span>
+          <img class="logo-img" src="Brevora.jpeg" alt="Brevora"
+               onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+               onerror="this.style.display='none';">
+        </div>
+        <span class="logo-card-name">Brevora</span>
+        <span class="logo-card-num">02<i></i></span>
+      </div>
+
+      <div class="logo-card tilt-card reveal-3d">
+        <span class="corner-spark corner-spark-tr" aria-hidden="true">✦</span>
+        <span class="corner-spark corner-spark-bl" aria-hidden="true">✦</span>
+        <div class="logo-card-mark">
+          <span class="logo-placeholder">P</span>
+          <img class="logo-img" src="NOVA.jpeg" alt="NOVA"
+               onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+               onerror="this.style.display='none';">
+        </div>
+        <span class="logo-card-name">NOVA</span>
+        <span class="logo-card-num">03<i></i></span>
+      </div>
+
+      <div class="logo-card tilt-card reveal-3d delay-1">
+        <span class="corner-spark corner-spark-tr" aria-hidden="true">✦</span>
+        <span class="corner-spark corner-spark-bl" aria-hidden="true">✦</span>
+        <div class="logo-card-mark">
+          <span class="logo-placeholder">N</span>
+          <img class="logo-img" src="Vanta.jpeg" alt="Vanta"
+               onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+               onerror="this.style.display='none';">
+        </div>
+        <span class="logo-card-name">Vanta</span>
+        <span class="logo-card-num">04<i></i></span>
+      </div>
+    </div>
+
+    <div class="logogrid-grid">
+      <div class="logo-card tilt-card reveal-3d">
+        <span class="corner-spark corner-spark-tr" aria-hidden="true">✦</span>
+        <span class="corner-spark corner-spark-bl" aria-hidden="true">✦</span>
+        <div class="logo-card-mark">
+          <span class="logo-placeholder">A</span>
+          <img class="logo-img" src="vyne.jpeg" alt="VYNE"
+               onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+               onerror="this.style.display='none';">
+        </div>
+        <span class="logo-card-name">VYNE</span>
+        <span class="logo-card-num">05<i></i></span>
+      </div>
+
+      <div class="logo-card tilt-card reveal-3d delay-1">
+        <span class="corner-spark corner-spark-tr" aria-hidden="true">✦</span>
+        <span class="corner-spark corner-spark-bl" aria-hidden="true">✦</span>
+        <div class="logo-card-mark">
+          <span class="logo-placeholder">V</span>
+          <img class="logo-img" src="rift.jpeg" alt="Rift"
+               onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+               onerror="this.style.display='none';">
+        </div>
+        <span class="logo-card-name">Rift</span>
+        <span class="logo-card-num">06<i></i></span>
+      </div>
+
+      <div class="logo-card tilt-card reveal-3d">
+        <span class="corner-spark corner-spark-tr" aria-hidden="true">✦</span>
+        <span class="corner-spark corner-spark-bl" aria-hidden="true">✦</span>
+        <div class="logo-card-mark">
+          <span class="logo-placeholder">P</span>
+          <img class="logo-img" src="Bhuvi Label.jpeg" alt="Bhuvi Label"
+               onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+               onerror="this.style.display='none';">
+        </div>
+        <span class="logo-card-name">Bhuvi Label</span>
+        <span class="logo-card-num">07<i></i></span>
+      </div>
+
+      <div class="logo-card tilt-card reveal-3d delay-1">
+        <span class="corner-spark corner-spark-tr" aria-hidden="true">✦</span>
+        <span class="corner-spark corner-spark-bl" aria-hidden="true">✦</span>
+        <div class="logo-card-mark">
+          <span class="logo-placeholder">N</span>
+          <img class="logo-img" src="ALTERRA.jpeg" alt="Alterra"
+               onload="this.style.display='block'; this.previousElementSibling.style.display='none';"
+               onerror="this.style.display='none';">
+        </div>
+        <span class="logo-card-name">Alterra</span>
+        <span class="logo-card-num">08<i></i></span>
+      </div>
+    </div>
+
+    <div class="logogrid-tags">
+      <span>Visual Identity</span>
+      <i></i>
+      <span>Branding</span>
+      <i></i>
+      <span>Logo Design</span>
+    </div>
+
+    <span class="logogrid-corner-spark" aria-hidden="true">✦</span>
+  </section>
+
+  <section class="logofolio" id="branding-title">
+    <div class="logofolio-center reveal-3d tilt-card">
+      <h2 class="logofolio-title">Branding</h2>
+      <p class="logofolio-sub">
+        <span class="lf-spark" aria-hidden="true">✦</span>
+        <span class="lf-word">Illustration</span>
+        <span class="lf-spark" aria-hidden="true">✦</span>
+      </p>
+    </div>
+
+    <div class="logofolio-tags">
+      <span>Visual Identity</span>
+      <i></i>
+      <span>Brand Design</span>
+      <i></i>
+      <span>Logo Design</span>
+    </div>
+
+    <span class="logofolio-corner-spark" aria-hidden="true">✦</span>
+    <span class="logofolio-page-index"><b>05</b> / 10</span>
+  </section>
+  
+  <section class="logofolio" id="alterra-branding">
+    <div class="project-showcase-section">
+      <img 
+        src="brandingggg.jpeg" 
+        alt="Alterra Mountain Cafe - Full Branding Showcase" 
+        class="full-showcase-img" 
+        loading="lazy"
+      >
+    </div>
+  </section>
+
+  <section class="logofolio" id="posters-title">
+    <div class="logofolio-center reveal-3d tilt-card">
+      <h2 class="logofolio-title">Posters</h2>
+      <p class="logofolio-sub">
+        <span class="lf-spark" aria-hidden="true">✦</span>
+        <span class="lf-word">Written posters series</span>
+        <span class="lf-spark" aria-hidden="true">✦</span>
+      </p>
+    </div>
+
+    <div class="logofolio-tags">
+      <span>Visual Identity</span>
+      <i></i>
+      <span>Brand Design</span>
+      <i></i>
+      <span>Logo Design</span>
+    </div>
+
+    <span class="logofolio-corner-spark" aria-hidden="true">✦</span>
+    <span class="logofolio-page-index"><b>06</b> / 10</span>
+  </section>
+
+  <!-- POSTERS SHOWCASE SECTION -->
+  <section class="logofolio" id="logofolio">
+    <span class="posters-section" id="posters-showcase">
+    <div class="posters-main-grid">
+      <!-- Left Info Column -->
+      <div class="posters-info-col">
+        <h2 class="poster-main-title">POSTER</h2>
+        <h4 class="poster-sub-title">VISUAL STORYTELLING</h4>
+        
+        <p class="poster-desc">
+          A collection of poster designs exploring typography, imagery and composition to communicate bold ideas and emotions.
+        </p>
+
+        <!-- Feature Highlights Card -->
+        <div class="poster-features-card">
+          <div class="feature-item">
+            <strong>BOLD TYPOGRAPHY</strong>
+            <p>Letterforms that speak loud.</p>
+          </div>
+          <div class="feature-item">
+            <strong>STRONG MESSAGE</strong>
+            <p>Posters that convey, connect and create impact.</p>
+          </div>
+          <div class="feature-item">
+            <strong>VISUAL IMPACT</strong>
+            <p>High contrast compositions that grab attention.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right 6 Posters Grid -->
+      <div class="posters-gallery-grid">
+        <div class="poster-card">
+          <img src="amg.jpeg" alt="Poster 1" class="poster-img">
+        </div>
+        <div class="poster-card">
+          <img src="gtr.jpeg" alt="Poster 2" class="poster-img">
+        </div>
+        <div class="poster-card">
+          <img src="lambo.jpeg" alt="Poster 3" class="poster-img">
+        </div>
+        <div class="poster-card">
+          <img src="football.jpeg" alt="Poster 4" class="poster-img">
+        </div>
+        <div class="poster-card">
+          <img src="squid game.jpeg" alt="Poster 5" class="poster-img">
+        </div>
+        <div class="poster-card">
+          <img src="stranger things.jpeg" alt="Poster 6" class="poster-img">
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Footer Tagline -->
+    <div class="posters-bottom-bar">
+      <span>VISUAL IDENTITY</span> • 
+      <span>BRANDING</span> • 
+      <span>EXPERIENCE</span> • 
+      <span>POSTER SERIES</span>
+    </div>
+  </section>
+
+  <section class="logofolio" id="social-post">
+    <div class="logofolio-center reveal-3d tilt-card">
+      <h2 class="logofolio-title">Social Post</h2>
+      <p class="logofolio-sub">
+        <span class="lf-spark" aria-hidden="true">✦</span>
+        <span class="lf-word">Social media post design</span>
+        <span class="lf-spark" aria-hidden="true">✦</span>
+      </p>
+    </div>
+
+    <div class="logofolio-tags">
+      <span>Visual Identity</span>
+      <i></i>
+      <span>Brand Design</span>
+      <i></i>
+      <span>Logo Design</span>
+    </div>
+
+    <span class="logofolio-corner-spark" aria-hidden="true">✦</span>
+    <span class="logofolio-page-index"><b>07</b> / 10</span>
+  </section>
+
+  <div id="logoModal" class="logo-modal">
+    <span class="modal-close">&times;</span>
+    <div class="modal-content">
+      <div class="modal-logo-wrapper" id="modalLogoMark"></div>
+      <h3 id="modalLogoTitle" class="modal-logo-title">Logo Name</h3>
+      <p id="modalLogoTag" class="modal-logo-tag">Brand Category</p>
+    </div>
+  </div>
+
+<section class="logofolio" id="logofolio">
+    <!-- Right Column: 3 Posts Grid -->
+    <div class="sp-gallery-grid sp-3-posts">
+      <!-- Post 1 -->
+      <div class="sp-card">
+        <img src="1111.jpeg" alt="Social Post 1" class="sp-img">
+      </div>
+
+      <!-- Post 2 -->
+      <div class="sp-card">
+        <img src="2222.jpeg" alt="Social Post 2" class="sp-img">
+      </div>
+
+      <!-- Post 3 -->
+      <div class="sp-card">
+        <img src="3333.jpeg" alt="Social Post 3" class="sp-img">
+      </div>
+    </div>
+  </div>
+
+  <!-- Bottom Bar -->
+  <div class="sp-bottom-bar">
+    <span>VISUAL IDENTITY</span> • 
+    <span>BRANDING</span> • 
+    <span>EXPERIENCE</span> • 
+    <span>SOCIAL POST SERIES</span>
+    <span class="sp-spark">✦</span>
+  </div>
+</section>
+
+  <section class="logofolio" id="logofolio">
+    <div class="logofolio-center reveal-3d tilt-card">
+      <h2 class="logofolio-title">Retouching</h2>
+      <p class="logofolio-sub">
+        <span class="lf-spark" aria-hidden="true">✦</span>
+        <span class="lf-word">Restoration</span>
+        <span class="lf-spark" aria-hidden="true">✦</span>
+      </p>
+    </div>
+
+    <div class="logofolio-tags">
+      <span>Visual Identity</span>
+      <i></i>
+      <span>Brand Design</span>
+      <i></i>
+      <span>Logo Design</span>
+    </div>
+
+    <span class="logofolio-corner-spark" aria-hidden="true">✦</span>
+    <span class="logofolio-page-index"><b>08</b> / 10</span>
+  </section>
+
+  <section class="logofolio" id="alterra-branding">
+    <div class="project-showcase-section">
+      <img 
+        src="tonyyyyyyyyyyyyyyyyyy.png" 
+        alt="Alterra Mountain Cafe - Full Branding Showcase" 
+        class="full-showcase-img" 
+        loading="lazy"
+      >
+    </div>
+  </section>
+
+<section class="logofolio" id="alterra-branding">
+    <div class="project-showcase-section">
+      <img 
+        src="toonnyyyyy.jpeg" 
+        alt="Alterra Mountain Cafe - Full Branding Showcase" 
+        class="full-showcase-img" 
+        loading="lazy"
+      >
+    </div>
+  </section>
+
+    <section class="logofolio" id="logofolio">
+    <div class="logofolio-center reveal-3d tilt-card">
+      <h2 class="logofolio-title">Thumbnail</h2>
+      <p class="logofolio-sub">
+        <span class="lf-spark" aria-hidden="true">✦</span>
+        <span class="lf-word">YouTube</span>
+        <span class="lf-spark" aria-hidden="true">✦</span>
+      </p>
+    </div>
+
+    <div class="logofolio-tags">
+      <span>Visual Identity</span>
+      <i></i>
+      <span>Brand Design</span>
+      <i></i>
+      <span>Logo Design</span>
+    </div>
+
+    <span class="logofolio-corner-spark" aria-hidden="true">✦</span>
+    <span class="logofolio-page-index"><b>09</b> / 10</span>
+  </section>
+
+    <div class="project-showcase-section">
+      <img 
+        src="thumbnail1.jpeg" 
+        alt="Alterra Mountain Cafe - Full Branding Showcase" 
+        class="full-showcase-img" 
+        loading="lazy"
+      >
+    </div>
+    
+    <div class="project-showcase-section">
+      <img 
+        src="thumbnail2.jpeg" 
+        alt="Alterra Mountain Cafe - Full Branding Showcase" 
+        class="full-showcase-img" 
+        loading="lazy"
+      >
+    </div>
+  
+
+  <section class="thankyou-section" id="thank-you">
+  <!-- Top Tagline Bar -->
+  <div class="ty-top-bar">
+    <span class="ty-top-tag">THANK YOU FOR EXPLORING MY WORK</span>
+  </div>
+
+  <div class="ty-main-layout">
+    <!-- Left Main Content -->
+    <div class="ty-content-left">
+      <h1 class="ty-heading">
+        LET’S CREATE<br>
+        <span class="ty-purple-glow">SOMETHING</span><br>
+        EXTRAORDINARY.
+      </h1>
+
+      <p class="ty-subhead">
+        Great ideas deserve <span>great design.</span>
+      </p>
+
+      <p class="ty-lead-desc">
+        I help brands and individuals bring their vision to life through strategic, impactful and timeless visuals.
+      </p>
+    </div>
+
+    <!-- Right Side Vertical List with Icons -->
+    <div class="ty-features-list">
+      <div class="ty-feature-row">
+        <div class="ty-icon-hex">
+          <svg viewBox="0 0 24 24"><path d="M12 2a6 6 0 0 0-6 6c0 2.38 1.19 4.47 3 5.74V17a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3.26c1.81-1.27 3-3.36 3-5.74a6 6 0 0 0-6-6zM9 21a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-1H9v1z"/></svg>
+        </div>
+        <div class="ty-feature-info">
+          <h4>STRATEGIC THINKER</h4>
+          <p>I design with purpose. Every element has a reason.</p>
+        </div>
+      </div>
+
+      <div class="ty-feature-row">
+        <div class="ty-icon-hex">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 9l10 13L22 9 12 2zm0 3.8L18.6 9 12 17.6 5.4 9 12 5.8z"/></svg>
+        </div>
+        <div class="ty-feature-info">
+          <h4>VISUALLY IMPACTFUL</h4>
+          <p>Designs that grab attention and leave a lasting impression.</p>
+        </div>
+      </div>
+
+      <div class="ty-feature-row">
+        <div class="ty-icon-hex">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <div class="ty-feature-info">
+          <h4>BRAND FOCUSED</h4>
+          <p>I create visuals that align with your brand and speak to your audience.</p>
+        </div>
+      </div>
+
+      <div class="ty-feature-row">
+        <div class="ty-icon-hex">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 6v6l4 2"/></svg>
+        </div>
+        <div class="ty-feature-info">
+          <h4>RELIABLE &amp; ON TIME</h4>
+          <p>Deadlines matter. You can count on me.</p>
+        </div>
+      </div>
+
+      <div class="ty-feature-row">
+        <div class="ty-icon-hex">
+          <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+        </div>
+        <div class="ty-feature-info">
+          <h4>PASSIONATE &amp; DEDICATED</h4>
+          <p>I treat your project like it's my own.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Lower Section: "What You Get" Container + "Let's Talk" Box -->
+  <div class="ty-bottom-container">
+    <div class="ty-what-you-get">
+      <div class="ty-wyg-title">WHAT YOU GET WHEN YOU WORK WITH ME</div>
+      
+      <div class="ty-wyg-grid">
+        <div class="ty-wyg-card">
+          <div class="ty-crystal-icon">❖</div>
+          <h5>CUSTOM DESIGNS THAT STAND OUT</h5>
+          <p>Tailored visuals that reflect your brand and goals.</p>
+        </div>
+
+        <div class="ty-wyg-card">
+          <div class="ty-crystal-icon">⬖</div>
+          <h5>CLEAR COMMUNICATION</h5>
+          <p>I keep you updated and involved at every step.</p>
+        </div>
+
+        <div class="ty-wyg-card">
+          <div class="ty-crystal-icon">✦</div>
+          <h5>UNLIMITED CREATIVITY</h5>
+          <p>Fresh ideas, unique concepts and modern designs.</p>
+        </div>
+
+        <div class="ty-wyg-card">
+          <div class="ty-crystal-icon">🛡</div>
+          <h5>PROFESSIONAL QUALITY</h5>
+          <p>High resolution, print ready and pixel perfect.</p>
+        </div>
+
+        <div class="ty-wyg-card">
+          <div class="ty-crystal-icon">◈</div>
+          <h5>100% SATISFACTION</h5>
+          <p>Your vision, My commitment. Perfect results.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Call to Action Glass Card -->
+    <a href="#contact" class="ty-cta-card">
+      <span class="ty-cta-sub">HAVE A PROJECT IN MIND?</span>
+      <h2 class="ty-cta-title">LET’S<br>TALK</h2>
+      <span class="ty-cta-arrow">➔</span>
+      <p class="ty-cta-desc">I'M EXCITED TO HEAR YOUR IDEA AND TURN IT INTO SOMETHING AMAZING.</p>
+    </a>
+  </div>
+
+  <!-- Mid Tagline Divider -->
+  <div class="ty-mid-line">
+    YOUR IDEA. &nbsp; MY DESIGN. &nbsp; <span>ONE STRONG</span> VISUAL IDENTITY.
+  </div>
+
+  <!-- Bottom Bar Tags & Signature -->
+  <div class="ty-footer">
+    <div class="ty-tags">
+      <span>BRANDING</span> ✦ 
+      <span>SOCIAL MEDIA</span> ✦ 
+      <span>POSTERS</span> ✦ 
+      <span>RETOUCHING</span> ✦ 
+      <span>RESTORATION</span>
+    </div>
+    
+    <div class="ty-signature-wrap">
+      <span class="ty-sig-text">Chirag Sachdeva</span>
+      <span class="ty-sig-sub">GRAPHIC DESIGNER</span>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <!-- Top Small Tagline -->
+  <div class="contact-top-tag">LET'S CONNECT</div>
+
+  <div class="contact-main-grid">
+    <!-- Left Column: Title & Text -->
+    <div class="contact-left-col">
+      <h1 class="contact-title">
+        CONTACT<br>
+        <span class="contact-purple">US.</span>
+      </h1>
+
+      <p class="contact-subhead">I'D LOVE TO HEAR ABOUT YOUR PROJECT</p>
+      <p class="contact-desc">Let's create something <span>impactful</span> together.</p>
+    </div>
+
+    <!-- Right Column: Contact Details Card -->
+    <div class="contact-card">
+      <!-- Email -->
+      <div class="contact-item">
+        <div class="contact-circle-icon">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        </div>
+        <div class="contact-info">
+          <label>EMAIL</label>
+          <a href="mailto: chiragsachdeva7758@gmail.com">chiragsachdeva7758@gmail.com</a>
+        </div>
+      </div>
+
+      <!-- Phone -->
+      <div class="contact-item">
+        <div class="contact-circle-icon">
+          <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+        </div>
+        <div class="contact-info">
+          <label>PHONE</label>
+          <a href="tel: +91  8569857758">+91  8569857758</a>
+        </div>
+      </div>
+
+      <!-- Location -->
+      <div class="contact-item">
+        <div class="contact-circle-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+        </div>
+        <div class="contact-info">
+          <label>LOCATION</label>
+          <p>Chandigarh, India</p>
+        </div>
+      </div>
+
+      <!-- Freelance Status -->
+      <div class="contact-item">
+        <div class="contact-circle-icon">
+          <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+        </div>
+        <div class="contact-info">
+          <label>FREELANCE</label>
+          <p>Open for Freelance Projects</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Thank You Sparkle Section -->
+  <div class="contact-thankyou-wrap">
+    <div class="contact-sparkle">✦</div>
+    <div class="contact-ty-title">THANK YOU FOR CHECKING OUT MY WORK.</div>
+    <div class="contact-ty-sub">I LOOK FORWARD TO WORKING WITH YOU!</div>
+  </div>
+
+  <!-- Signature -->
+  <div class="contact-signature-wrap">
+    <span class="contact-sig-name">Chirag Sachdeva</span>
+    <span class="contact-sig-role">GRAPHIC DESIGNER</span>
+  </div>
+
+  <!-- Copyright Footer Line (At the very bottom) -->
+  <div class="contact-copyright-bar">
+    <p>© 2026 Chirag Sachdeva. All Rights Reserved.</p>
+  </div>
+</section>
+
+<!-- Interactive Glow Follower -->
+<div class="cursor-glow"></div>
+
+<script>
+  const glow = document.querySelector('.cursor-glow');
+  document.addEventListener('mousemove', (e) => {
+    glow.style.left = e.clientX + 'px';
+    glow.style.top = e.clientY + 'px';
+  });
+</script>
+
+<!-- Fullscreen Lightbox / Popup Modal -->
+<div id="imageModal" class="img-modal">
+  <span class="modal-close">&times;</span>
+  <img class="modal-content" id="modalImg" alt="Enlarged Post">
+</div>
+
+<script src="portfolio.js"></script>
+</body>
+</html>
